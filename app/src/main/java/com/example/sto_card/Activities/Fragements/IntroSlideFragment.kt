@@ -29,14 +29,14 @@ class IntroSlideFragment : Fragment() {
         val signin = view.findViewById<Button>(R.id.Sign_in_btn)
       //  val nav = Navigation.findNavController(view)
         signup.setOnClickListener {
-            val fragment: Fragment = LoginFragment()
+            val fragment: Fragment = RegistrationFragment()
             val fragmentManager: FragmentManager? = fragmentManager
             fragmentManager?.beginTransaction()
                 ?.replace(R.id.FrameIntro, fragment)
                 ?.commit()
         }
         signin.setOnClickListener {
-            val fragment: Fragment = RegistrationFragment()
+            val fragment: Fragment = LoginFragment()
             val fragmentManager: FragmentManager? = fragmentManager
             fragmentManager?.beginTransaction()
                 ?.replace(R.id.FrameIntro, fragment)

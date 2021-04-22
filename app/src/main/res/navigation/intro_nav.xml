@@ -2,12 +2,14 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/intro_nav">
+    android:id="@+id/intro_nav"
+    app:startDestination="@+id/Intro">
     <fragment
         android:id="@+id/Intro"
         android:name="com.example.sto_card.Activities.Fragements.IntroSlideFragment"
         android:label="Intro"
         tools:layout="@layout/fragment_intro_slide"
+        app:defaultNavHost="true"
         >
         <action
             android:id="@+id/action_Intro_to_Login"

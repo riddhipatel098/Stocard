@@ -1,6 +1,8 @@
 package com.example.sto_card.Activities.Activities
 
 import android.os.Bundle
+import androidx.navigation.Navigation.findNavController
+
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sto_card.Activities.Fragements.IntroSlideFragment
 import com.example.sto_card.R
@@ -20,4 +22,6 @@ class IntroScreen : AppCompatActivity() {
 
 
 }
+//    override fun onSupportNavigateUp() =
+//        findNavController(this, R.id.navHostFragment).navigateUp()
 }
