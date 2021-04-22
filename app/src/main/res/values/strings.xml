@@ -5,4 +5,6 @@
     <string name="Sign_in">Sign In</string>
     <string name="Sign_up">Sign Up</string>
     <string name="username_already_exists">Already Exists Username </string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Close</string>
 </resources>
