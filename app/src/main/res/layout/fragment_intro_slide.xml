@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Fragements.IntroSlideFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:background="@drawable/rounded_background"
+        />
+
+    <ImageView
+        android:id="@+id/Vector_1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/credit_card"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Turn your phone into your wallet and redefine your everyday shopping experience!"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/background"
+        android:layout_margin="30dp"
+        android:textColor="@color/gray"
+        />
+    <Button
+        android:id="@+id/Sign_up_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Vector_1"
+        android:layout_centerHorizontal="true"
+        android:text="SignUp"
+        android:textSize="15dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/btn_corners"
+        />
+    <Button
+        android:id="@+id/Sign_in_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Sign_up_btn"
+        android:layout_centerHorizontal="true"
+        android:text="SignIn"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_corners"
+        />
+
+</RelativeLayout>
+</FrameLayout>
