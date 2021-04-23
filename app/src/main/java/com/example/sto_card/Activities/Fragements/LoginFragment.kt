@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import com.example.sto_card.Activities.Activities.Home
 import com.example.sto_card.R
 
@@ -23,6 +24,8 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view:View= inflater.inflate(R.layout.fragment_login, container, false)
+
+
         val signin=view.findViewById<Button>(R.id.Sign_In)
         signin.setOnClickListener(){
             requireActivity().run{
