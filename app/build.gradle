@@ -35,8 +35,11 @@ android {
 dependencies {
 //Lottie
     implementation "com.airbnb.android:lottie:3.4.2"
-//Image Picker
-    implementation 'com.github.florent37:inline-activity-result-kotlin:1.0.4'
+
+
+
+
+   
 //material
     //noinspection GradleCompatible
     implementation "com.android.support:design:28.0.2"

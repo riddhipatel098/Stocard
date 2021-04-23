@@ -1,5 +1,7 @@
 package com.example.sto_card.Activities.Fragements
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +10,8 @@ import android.view.ViewGroup
 import com.example.sto_card.R
 
 class RegistrationFragment : Fragment() {
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
