@@ -1,4 +1,4 @@
-package com.example.sto_card.Activities.Activities
+package com.example.sto_card.stocard.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

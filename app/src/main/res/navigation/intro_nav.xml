@@ -6,7 +6,7 @@
     app:startDestination="@+id/Intro">
     <fragment
         android:id="@+id/Intro"
-        android:name="com.example.sto_card.Activities.Fragements.IntroSlideFragment"
+        android:name="com.example.sto_card.stocard.fragements.IntroSlideFragment"
         android:label="Intro"
         tools:layout="@layout/fragment_intro_slide"
         app:defaultNavHost="true"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/Login"
-       android:name="com.example.sto_card.Activities.Fragements.LoginFragment"
+       android:name="com.example.sto_card.stocard.fragements.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login"
          >
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/Register"
-        android:name="com.example.sto_card.Activities.Fragements.RegistrationFragment"
+        android:name="com.example.sto_card.stocard.fragements.RegistrationFragment"
         android:label="Register"
         tools:layout="@layout/fragment_registration" />
 

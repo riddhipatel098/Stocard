@@ -1,11 +1,10 @@
-package com.example.sto_card.Activities.Fragements
+package com.example.sto_card.stocard.fragements
 
 
 
 import android.app.Activity
 import android.app.Activity.RESULT_OK
 import android.content.Intent
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater

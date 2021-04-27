@@ -1,20 +1,18 @@
-package com.example.sto_card.Activities.Activities
+package com.example.sto_card.stocard.activities
 
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import com.example.sto_card.Activities.Fragements.CardFragment
-import com.example.sto_card.Activities.Fragements.CopanFragment
-import com.example.sto_card.Activities.Fragements.HomeFragment
-import com.example.sto_card.Activities.Fragements.ProfileFragment
+import com.example.sto_card.stocard.fragements.CardFragment
+import com.example.sto_card.stocard.fragements.CopanFragment
+import com.example.sto_card.stocard.fragements.HomeFragment
+import com.example.sto_card.stocard.fragements.ProfileFragment
 import com.example.sto_card.R
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener {
@@ -80,7 +78,7 @@ class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListen
     }
     private fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.FrameHome, fragment)
+        transaction.replace(R.id.fragment_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }

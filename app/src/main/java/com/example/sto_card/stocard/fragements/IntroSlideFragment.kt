@@ -1,4 +1,4 @@
-package com.example.sto_card.Activities.Fragements
+package com.example.sto_card.stocard.fragements
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.navigation.Navigation
 import com.example.sto_card.R
 
 
@@ -32,14 +31,14 @@ class IntroSlideFragment : Fragment() {
             val fragment: Fragment = RegistrationFragment()
             val fragmentManager: FragmentManager? = fragmentManager
             fragmentManager?.beginTransaction()
-                ?.replace(R.id.FrameIntro, fragment)
+                ?.replace(R.id.fragment_container, fragment)
                 ?.commit()
         }
         signin.setOnClickListener {
             val fragment: Fragment = LoginFragment()
             val fragmentManager: FragmentManager? = fragmentManager
             fragmentManager?.beginTransaction()
-                ?.replace(R.id.FrameIntro, fragment)
+                ?.replace(R.id.fragment_container, fragment)
                 ?.commit()
         }
         return view

@@ -9,7 +9,7 @@
     <androidx.drawerlayout.widget.DrawerLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.Activities.Home"
+    tools:context=".stocard.activities.Home"
     android:id="@+id/drawer_layout"
     tools:openDrawer="start">
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         <FrameLayout
-            android:id="@+id/FrameHome"
+            android:id="@+id/fragment_container"
             android:layout_marginTop="60dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

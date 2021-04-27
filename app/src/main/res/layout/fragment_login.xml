@@ -5,7 +5,7 @@
     android:id="@+id/content_frame"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".Activities.Fragements.LoginFragment">
+    tools:context=".stocard.fragements.LoginFragment">
 
   <RelativeLayout
       android:layout_width="match_parent"
