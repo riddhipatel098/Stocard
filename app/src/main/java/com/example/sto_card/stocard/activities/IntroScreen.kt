@@ -14,6 +14,8 @@ class IntroScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro_screen)
 
+
+
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, IntroSlideFragment())
         transaction.disallowAddToBackStack()

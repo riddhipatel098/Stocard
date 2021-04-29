@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".stocard.activities.Home">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -16,5 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        app:menu="@menu/toolbar_menu"
         />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

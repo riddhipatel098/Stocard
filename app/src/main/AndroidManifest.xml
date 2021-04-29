@@ -30,6 +30,14 @@
             </intent-filter>
         </activity> <!-- uCrop cropping activity -->
 
+
+        <service
+            android:name=".stocard.modals.MyFirebaseInstanceIDService"
+           >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
         <!-- cache directory file provider paths -->
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -40,6 +48,9 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+
+
     </application>
 
 </manifest>
