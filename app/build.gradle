@@ -37,6 +37,7 @@ android {
     }
     buildscript {
         repositories {
+
             // Check that you have the following line (if not, add it):
             google()  // Google's Maven repository
         }
@@ -48,8 +49,15 @@ android {
     }
     allprojects {
         repositories {
+
+
+            google()
+
+            jcenter()
             mavenCentral()
             google()
+
+            maven {url 'https://jitpack.io'}
             maven {
 
                 url 'https://maven.google.com/'
@@ -98,6 +106,8 @@ dependencies {
 ////firebase
 
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
+//scratchview
+    implementation 'com.github.myinnos:AndroidScratchCard:v1.0'
 
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

@@ -3,8 +3,11 @@ package com.example.sto_card.stocard.activities
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -13,16 +16,17 @@ import com.example.sto_card.stocard.fragements.CopanFragment
 import com.example.sto_card.stocard.fragements.HomeFragment
 import com.example.sto_card.stocard.fragements.ProfileFragment
 import com.example.sto_card.R
+import com.example.sto_card.stocard.interfaces.CardSelectListener
 import com.google.android.material.navigation.NavigationView
 
-class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener {
+class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
-
+    private lateinit var toolbar:Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar_main)
+         toolbar= findViewById(R.id.toolbar_main)
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
         setSupportActionBar(toolbar)
@@ -37,6 +41,13 @@ class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListen
 
 
    }
+
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        MenuInflater(this).inflate(R.menu.toolbar_menu,menu)
+//        return true
+//    }
+
+
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
         toggle.syncState()
@@ -82,4 +93,5 @@ class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListen
         transaction.addToBackStack(null)
         transaction.commit()
     }
+
 }
