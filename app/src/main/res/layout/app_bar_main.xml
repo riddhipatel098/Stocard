@@ -19,16 +19,16 @@
         android:background="?attr/colorPrimary"
 
         >
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/_3_selected"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="20dp"-->
-<!--                android:id="@+id/itemCounted"/>-->
-<!--        </RelativeLayout>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3_selected"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:id="@+id/itemCounted"/>
+        </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

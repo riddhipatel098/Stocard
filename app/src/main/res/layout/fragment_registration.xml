@@ -81,11 +81,24 @@
            android:paddingLeft="16dip"
            />
        <EditText
-           android:id="@+id/Password"
+           android:id="@+id/Phone"
            android:layout_width="300dp"
            android:layout_height="50dp"
            android:textColorHint="@color/gray"
            android:layout_below="@+id/Email"
+           android:hint="@string/enter_your_phone"
+           android:layout_marginTop="10dp"
+           android:layout_centerHorizontal="true"
+           android:background="@drawable/edit_text"
+           android:textColor="@color/gray"
+           android:paddingLeft="16dip"
+           />
+       <EditText
+           android:id="@+id/Password"
+           android:layout_width="300dp"
+           android:layout_height="50dp"
+           android:textColorHint="@color/gray"
+           android:layout_below="@+id/Phone"
            android:hint="@string/enter_password"
            android:layout_marginTop="10dp"
            android:layout_centerHorizontal="true"

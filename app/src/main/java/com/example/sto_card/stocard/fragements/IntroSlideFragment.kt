@@ -50,7 +50,7 @@ class IntroSlideFragment : Fragment() {
         val signup = view.findViewById<Button>(R.id.Sign_up_btn)
         val signin = view.findViewById<Button>(R.id.Sign_in_btn)
       //  val nav = Navigation.findNavController(view)
-        signup.setOnClickListener {
+             signup.setOnClickListener {
             val fragment: Fragment = RegistrationFragment()
             val fragmentManager: FragmentManager? = fragmentManager
             fragmentManager?.beginTransaction()
