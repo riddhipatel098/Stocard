@@ -4,6 +4,7 @@ package com.example.sto_card.stocard.fragements
 
 import android.app.Activity
 import android.app.Activity.RESULT_OK
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -14,6 +15,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
@@ -42,7 +44,7 @@ class RegistrationFragment : Fragment() {
     lateinit var imageview:ImageView
     lateinit var plus:ImageView
     lateinit var Sign_Up:Button
-
+    lateinit var already_acc:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -68,6 +70,10 @@ class RegistrationFragment : Fragment() {
         imageview=view.findViewById<ImageView>(R.id.imageView)
          plus = view.findViewById<ImageView>(R.id.Plus)
         Sign_Up = view.findViewById<Button>(R.id.Sign_up)
+        already_acc = view.findViewById<Button>(R.id.already_have_Account)
+        already_acc.setOnClickListener{
+            LoadFragment(LoginFragment())
+        }
         plus.setOnClickListener(View.OnClickListener {
             onChooseFile(imageview)
         }
@@ -112,7 +118,9 @@ class RegistrationFragment : Fragment() {
             }
 
             //Response start
-
+            val SHARED_PREF_NAME = "my_shared_preff"
+            val sharedPreference = context?.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
+            val token = "Bearer " + sharedPreference?.getString("token", "defaultName")
             //set Image
             val file: File = File(URIPathHelper.getPath(requireContext(), resultUri!!))
             val requestFile = RequestBody.create(
@@ -142,12 +150,7 @@ class RegistrationFragment : Fragment() {
 
                     Log.d("hell............", response.body()?.message.toString())
                       Utils().showToast(context,response.body()?.message.toString())
-                    val fragment: Fragment = LoginFragment()
-                    val fragmentManager: FragmentManager? = fragmentManager
-                    fragmentManager?.beginTransaction()
-                            ?.replace(R.id.fragment_container, fragment)
-                            ?.commit()
-
+                      LoadFragment(LoginFragment())
 
 
                 }
@@ -175,8 +178,16 @@ class RegistrationFragment : Fragment() {
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 val e:Exception=result.error
              Toast.makeText(context,"profile Error"+e,Toast.LENGTH_LONG).show()
+
             }
         }
     }
+    fun LoadFragment(fragment:Fragment)
+    {
+        val fragmentManager: FragmentManager? = fragmentManager
+        fragmentManager?.beginTransaction()
+                ?.replace(R.id.fragment_container, fragment)
+                ?.commit()
 
+    }
 }
