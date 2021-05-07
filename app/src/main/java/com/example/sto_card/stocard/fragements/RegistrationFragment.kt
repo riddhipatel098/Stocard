@@ -4,7 +4,6 @@ package com.example.sto_card.stocard.fragements
 
 import android.app.Activity
 import android.app.Activity.RESULT_OK
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -21,7 +20,7 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.sto_card.R
-import com.example.sto_card.stocard.modals.DefaultResponse
+import com.example.sto_card.stocard.Response.DefaultResponse
 import com.example.sto_card.stocard.modals.URIPathHelper
 import com.example.sto_card.stocard.network.RetrofitClient
 import com.example.sto_card.stocard.utils.Utils
@@ -118,9 +117,7 @@ class RegistrationFragment : Fragment() {
             }
 
             //Response start
-            val SHARED_PREF_NAME = "my_shared_preff"
-            val sharedPreference = context?.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
-            val token = "Bearer " + sharedPreference?.getString("token", "defaultName")
+
             //set Image
             val file: File = File(URIPathHelper.getPath(requireContext(), resultUri!!))
             val requestFile = RequestBody.create(

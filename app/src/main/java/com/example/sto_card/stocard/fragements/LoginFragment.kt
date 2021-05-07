@@ -11,7 +11,7 @@ import android.widget.Toast
 import com.example.sto_card.R
 import com.example.sto_card.stocard.activities.Home
 import com.example.sto_card.stocard.base.BaseFragment
-import com.example.sto_card.stocard.modals.DefaultResponse
+import com.example.sto_card.stocard.Response.DefaultResponse
 import com.example.sto_card.stocard.modals.SharedPrefManager
 import com.example.sto_card.stocard.network.RetrofitClient
 import com.example.sto_card.stocard.utils.Utils
@@ -47,10 +47,11 @@ class LoginFragment : BaseFragment() {
         when (v?.id) {
             R.id.Sign_In -> {
 
+
                 email = L_Email.text.toString().trim()
                 password = L_Password.text.toString().trim()
                 Log.d("token........",token)
-     if (isCheckValidation()) {
+       if (isCheckValidation()) {
          if (email != null) {
 
              val map: MutableMap<String, RequestBody> = HashMap()
@@ -71,7 +72,6 @@ class LoginFragment : BaseFragment() {
                              requireActivity().run {
                                  val i = (Intent(this, Home::class.java))
                                  i.putExtra("Username", response.body()?.data!!.name)
-
                                  startActivity(i)
                              }
                          } else {
