@@ -72,4 +72,10 @@
     <string name="_3_selected">3 selected</string>
     <string name="enter_your_phone">enter_your_Phone</string>
     <string name="alreay_acc">Already have an Account</string>
+    <string name="title">First Daloge</string>
+    <string name="supporting_text">alternative Text</string>
+    <string name="cancel">cancel</string>
+    <string name="decline">decline</string>
+    <string name="accept">accept</string>
+    <string name="enter_refferal_code">Enter Refferal Code</string>
 </resources>

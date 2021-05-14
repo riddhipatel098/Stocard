@@ -23,17 +23,17 @@
 
         <activity android:name=".stocard.activities.Home" />
         <activity android:name=".stocard.activities.IntroScreen" />
-
+        <!-- uCrop cropping activity -->
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat"/>
-
+        <!-- uCrop cropping activity -->
         <activity android:name=".stocard.activities.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- uCrop cropping activity -->
+        </activity>
 
 
         <service
@@ -54,8 +54,10 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-
-
+<!--        &lt;!&ndash; TODO: Replace with your real AdMob app ID &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="com.google.android.gms.ads.APPLICATION_ID"-->
+<!--            android:value="ca-app-pub-################~##########"/>-->
     </application>
 
 </manifest>
