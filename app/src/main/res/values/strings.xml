@@ -67,15 +67,16 @@
 
     <string name="retype_password">Retype Password</string>
     <string name="Email">riddhi@gmail.com</string>
-    <string name="setting">Setting</string>
-    <string name="add">add</string>
-    <string name="_3_selected">3 selected</string>
-    <string name="enter_your_phone">enter_your_Phone</string>
-    <string name="alreay_acc">Already have an Account</string>
-    <string name="title">First Daloge</string>
-    <string name="supporting_text">alternative Text</string>
-    <string name="cancel">cancel</string>
-    <string name="decline">decline</string>
-    <string name="accept">accept</string>
-    <string name="enter_refferal_code">Enter Refferal Code</string>
+    <string name="setting" translatable="false">Setting</string>
+    <string name="add" translatable="false">add</string>
+    <string name="_3_selected" translatable="false">3 selected</string>
+    <string name="enter_your_phone" translatable="false">enter_your_Phone</string>
+    <string name="alreay_acc" translatable="false">Already have an Account</string>
+    <string name="title" translatable="false">First Daloge</string>
+    <string name="supporting_text" translatable="false">alternative Text</string>
+    <string name="cancel" translatable="false">cancel</string>
+    <string name="decline" translatable="false">decline</string>
+    <string name="accept" translatable="false">accept</string>
+    <string name="enter_refferal_code" translatable="false">Enter Refferal Code</string>
+    <string name="api_key">AIzaSyCN5gfL-BQnu08aeW3A0fgRipeE3Cq3nDA</string>
 </resources>

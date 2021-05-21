@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.sto_card"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -45,7 +45,7 @@ android {
         dependencies {
 
             // Add this line
-            classpath 'com.google.gms:google-services:4.3.5'
+            classpath 'com.google.gms:google-services:4.3.7'
         }
     }
     allprojects {
@@ -99,16 +99,23 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:30.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:design:30.1.1'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 //rating
    // implementation 'com.github.giswangsj:AndRatingBar:1.0.5'
 ////firebase
-
+    implementation 'com.google.firebase:firebase-messaging-directboot:20.2.0'
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+    implementation 'com.google.firebase:firebase-analytics'
 //scratchview
     implementation 'com.github.myinnos:AndroidScratchCard:v1.0'
+
+//autocomplete
+    implementation 'com.github.mukeshsolanki:Google-Places-AutoComplete-EditText:0.0.8'
 
 
 //serverside
@@ -129,7 +136,16 @@ dependencies {
 //Flip Card
     implementation 'com.wajahatkarim3.EasyFlipView:EasyFlipView:3.0.0'
 
+//fingerprint lock
+    implementation 'com.kevalpatel2106:fingerprint-dialog-compat:1.0'
+//    implementation project(':fingerprint-dialog-compat')
+    implementation 'com.alimuzaffar.lib:pinentryedittext:1.3.1'
 
+
+//drag drop
+    implementation 'com.jakewharton:butterknife:10.2.3'
+   // annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+  //  compile 'com.github.woxthebox:draglistview:1.7.2'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
@@ -144,4 +160,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 //    compile 'com.androidx.support:support-v4:28.1.0'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

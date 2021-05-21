@@ -3,7 +3,8 @@
     <group>
         <item android:id="@+id/Home"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Store List" />
+            android:title="Store List"
+            />
         <item android:id="@+id/Card"
             android:icon="@drawable/ic_baseline_card_membership_24"
             android:title="Card" />
@@ -20,15 +21,15 @@
             android:title="Invite User" />
         <item android:id="@+id/Have_A_code"
             android:title="Have a Referal Code" />
+        <item android:id="@+id/Map"
+            android:title="Find us" />
     </group>
+    <item android:id="@+id/Logout"
+        android:title="Logout" />
 
-    <item android:title="Title 1">
-        <menu>
-            <item android:id="@+id/Logout"
-                android:title="Logout" />
-            <item android:id="@+id/nav_item_seven"
-                android:icon="@drawable/ic_baseline_home_24"
-                android:title="Item 7" />
-        </menu>
-    </item>
+<!--    <item android:title="Menu">-->
+<!--        <menu>-->
+
+<!--        </menu>-->
+<!--    </item>-->
 </menu>

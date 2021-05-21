@@ -8,6 +8,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -22,13 +23,14 @@ import androidx.fragment.app.FragmentManager
 import com.example.sto_card.R
 import com.example.sto_card.stocard.Response.DefaultResponse
 import com.example.sto_card.stocard.modals.URIPathHelper
-import com.example.sto_card.stocard.network.RetrofitClient
+import com.example.sto_card.stocard.network.Api
+import com.example.sto_card.stocard.network.ApiUtils
 import com.example.sto_card.stocard.utils.Utils
+import com.google.firebase.iid.FirebaseInstanceId
 import com.theartofdev.edmodo.cropper.CropImage
 import com.theartofdev.edmodo.cropper.CropImageView
 import kotlinx.android.synthetic.main.fragment_registration.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
-
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -115,9 +117,9 @@ class RegistrationFragment : Fragment() {
                 ConfirmPassword.requestFocus()
                 return@setOnClickListener
             }
-
+            val tkn = FirebaseInstanceId.getInstance().token
             //Response start
-
+            Log.d("FCM_Token////",tkn.toString())
             //set Image
             val file: File = File(URIPathHelper.getPath(requireContext(), resultUri!!))
             val requestFile = RequestBody.create(
@@ -127,6 +129,16 @@ class RegistrationFragment : Fragment() {
             val body = MultipartBody.Part.createFormData("user_img", file.name, requestFile)
             //set Image finish
 
+            var mAPIService: Api? = null
+            mAPIService = ApiUtils.apiService
+
+
+            val deviceId = Settings.Secure.getString(
+                requireActivity().contentResolver,
+                Settings.Secure.ANDROID_ID
+            )
+            Log.d("deviceid", deviceId)
+
             //set other data
             val map: MutableMap<String, RequestBody> = HashMap()
             map["name"] = toPart(name) as RequestBody
@@ -134,17 +146,18 @@ class RegistrationFragment : Fragment() {
             map["password"] = toPart(password)
             map["phone"] = toPart(phone)
             map["pin"] = toPart(pin)
+            map["device_id"] = toPart(tkn.toString())
             //set other data finish
 
             //send request
-            RetrofitClient.instance.createUser("",body,"register",map).enqueue(object :
+            mAPIService!!.createUser("",body,"register",map).enqueue(object :
                 Callback<DefaultResponse> {
                 override fun onResponse(
                         call: Call<DefaultResponse>,
                         response: retrofit2.Response<DefaultResponse>
                 ) {
 
-
+                    Log.e("macro", "responseA->" + response)
                     Log.d("hell............", response.body()?.message.toString())
                       Utils().showToast(context,response.body()?.message.toString())
                       LoadFragment(LoginFragment())
@@ -153,7 +166,7 @@ class RegistrationFragment : Fragment() {
                 }
 
                 override fun onFailure(call: Call<DefaultResponse>, t: Throwable) {
-                    Utils().showToast(context,t.message)
+                    Log.e("macro", "failureA->" + t);
                 }
 
             })

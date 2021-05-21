@@ -17,6 +17,7 @@ import com.google.firebase.messaging.FirebaseMessaging
 
 class IntroSlideFragment : Fragment() {
 
+    var F_token:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,18 +31,6 @@ class IntroSlideFragment : Fragment() {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_intro_slide, container, false)
 
-
-//
-//        //firebase
-//        FirebaseMessaging.getInstance().subscribeToTopic("weather")
-//            .addOnCompleteListener { task ->
-//                var msg = "Done"
-//                if (!task.isSuccessful) {
-//                    msg = "Failed"
-//                }
-//                Log.d("notification", msg!!)
-//              Utils().showToast(context,msg)
-//            }
 
 
 
