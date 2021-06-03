@@ -39,14 +39,14 @@ class LoginFragment : BaseFragment() {
     val SHARED_PREF_NAME = "my_shared_preff"
     val sharedPreference =  context?.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
     val token = "Bearer " + sharedPreference?.getString("token", "defaultName")
-    val tkn = FirebaseInstanceId.getInstance().token
+
 
     //layout set
     override fun setContentView(): Int=R.layout.fragment_login
 
     //initialization
     override fun initView(rootView: View?, savedInstanceState: Bundle?) {
-        Log.d("FCM_Token///",tkn.toString())
+     //   Log.d("FCM_Token///",tkn.toString())
 
 
 
@@ -64,7 +64,7 @@ class LoginFragment : BaseFragment() {
                LoadFragment(ForgotPasswordFragment())
             }
             R.id.Sign_In ->{
-
+                val tkn = FirebaseInstanceId.getInstance().token
                 Log.d("FCM_Token////",tkn.toString())
 
                 var mAPIService: Api? = null

@@ -76,7 +76,14 @@
     <string name="supporting_text" translatable="false">alternative Text</string>
     <string name="cancel" translatable="false">cancel</string>
     <string name="decline" translatable="false">decline</string>
-    <string name="accept" translatable="false">accept</string>
+    <string name="accept" translatable="false">Payment</string>
     <string name="enter_refferal_code" translatable="false">Enter Refferal Code</string>
-    <string name="api_key">AIzaSyCN5gfL-BQnu08aeW3A0fgRipeE3Cq3nDA</string>
+    <string name="api_key" translatable="false">AIzaSyBxUf7Fm9WSE5csgDrpAp7G4_cCy5GxSCI</string>
+    <string-array name="brew_array">
+        <item>Cappuccino</item>
+        <item>Espresso</item>
+        <item>Mocha</item>
+        <item>Caffè Americano</item>
+        <item>Cafe Zorro</item>
+    </string-array>
 </resources>

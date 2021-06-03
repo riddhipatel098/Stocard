@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -21,12 +22,14 @@ import com.example.sto_card.R
 import com.example.sto_card.stocard.fragements.*
 import com.example.sto_card.stocard.modals.SharedPrefManager
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.fragment_registration.*
 import kotlinx.android.synthetic.main.nav_header_main.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import java.util.*
 
 
-class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
+class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener,
+    View.OnClickListener {
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var toolbar:Toolbar
@@ -78,12 +81,9 @@ class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListen
         header.nav_header_textView.setText(nm)
         header.nav_header_imageView.load(pt?.toUri())
 
-   }
+        openFragment(StoreFragment())
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        MenuInflater(this).inflate(R.menu.toolbar_menu,menu)
-//        return true
-//    }
+   }
 
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
@@ -101,13 +101,9 @@ class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListen
         R.id.Change_Password -> {
             openFragment(ChangePasswordFragment())
 
-
-//            Log.d("translate..", "translate")
-//            // LocaleHelper.setLocale(this, "gu") //for french;
-//            context = LocaleHelper.setLocale(this, "hi");
-//            var resources: Resources = context!!.getResources();
-//            //  nav_header_textView.setText(resources.getString(R.string.User_name));
         }
+
+        R.id.Change_Pin->openFragment(ChangePinFragment())
     }
 
         if (toggle.onOptionsItemSelected(item)) {
@@ -118,15 +114,15 @@ class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListen
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.Profile -> {
+                openFragment(ProfileFragment())
+
+            }
             R.id.Home ->
                 openFragment(StoreFragment())
                 //Toast.makeText(this, "Clicked item one", Toast.LENGTH_SHORT).show()
-            R.id.Card ->
-                openFragment(CardFragment())
-            R.id.Coopan ->
-                openFragment(CopanFragment())
-            R.id.Profile ->
-                openFragment(ProfileFragment())
+            R.id.Chat_bot ->
+                openFragment(ChatBotFragment())
             R.id.Logout -> {
 
                 SharedPrefManager.getInstance(applicationContext).clear()
@@ -137,7 +133,11 @@ class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListen
                 openFragment(EnterRefferalCodeFragment())
             }
             R.id.Map -> {
-               openFragment(FingerLockFragment())
+               openFragment(MapFragment())
+            }
+            R.id.Change_Pin->
+            {
+                openFragment(ChangePinFragment())
             }
             R.id.Invite_User -> {
                 val shareIntent: Intent = Intent().apply {
@@ -174,6 +174,9 @@ class Home : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListen
         return super.onCreateOptionsMenu(menu)
     }
 
+    override fun onClick(v: View?) {
+
+    }
 
 
 }

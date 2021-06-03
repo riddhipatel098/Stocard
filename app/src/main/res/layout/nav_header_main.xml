@@ -17,6 +17,7 @@
         android:id="@+id/nav_header_imageView"
         android:layout_width="64dp"
         android:layout_height="64dp"
+        android:clickable="true"
         android:src="@drawable/profile"
         />
 

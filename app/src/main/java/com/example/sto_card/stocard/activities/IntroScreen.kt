@@ -1,4 +1,4 @@
-package com.example.sto_card.stocard.activities
+    package com.example.sto_card.stocard.activities
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -40,6 +40,4 @@ class IntroScreen : AppCompatActivity() {
             startActivity(intent)
         }
     }
-//    override fun onSupportNavigateUp() =
-//        findNavController(this, R.id.navHostFragment).navigateUp()
 }

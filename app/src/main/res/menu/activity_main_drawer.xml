@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group>
+    <group>
         <item android:id="@+id/Home"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Store List"
+            android:title="Home"
             />
-        <item android:id="@+id/Card"
-            android:icon="@drawable/ic_baseline_card_membership_24"
-            android:title="Card" />
-        <item android:id="@+id/Coopan"
-            android:icon="@drawable/ic_baseline_local_offer_24"
-            android:title="Coopan" />
         <item android:id="@+id/Profile"
             android:icon="@drawable/ic_baseline_person_24"
             android:title="Profile" />
+        <item android:id="@+id/Invite_User"
+            android:icon="@drawable/ic_baseline_card_membership_24"
+            android:title="Invite User" />
+        <item android:id="@+id/Have_A_code"
+            android:icon="@drawable/ic_baseline_local_offer_24"
+            android:title="Have a Refral Code" />
     </group>
 
     <group android:id="@+id/group_menu">
-        <item android:id="@+id/Invite_User"
-            android:title="Invite User" />
-        <item android:id="@+id/Have_A_code"
-            android:title="Have a Referal Code" />
+
         <item android:id="@+id/Map"
             android:title="Find us" />
+        <item android:id="@+id/Chat_bot"
+            android:title="Chat Bot" />
+        <item android:id="@+id/Logout"
+            android:title="Logout" />
     </group>
-    <item android:id="@+id/Logout"
-        android:title="Logout" />
 
-<!--    <item android:title="Menu">-->
-<!--        <menu>-->
 
-<!--        </menu>-->
-<!--    </item>-->
+</group>
+
 </menu>
